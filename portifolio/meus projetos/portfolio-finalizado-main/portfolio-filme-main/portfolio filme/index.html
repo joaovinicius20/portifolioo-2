@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineTech - Portfólio Cinematográfico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Tech Elements -->
+    <div class="tech-bg">
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="tech-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-film"></i></span>
+                <span class="logo-text">Cine<span>Tech</span></span>
+            </div>
+            <nav class="tech-nav">
+                <ul id="nav-menu">
+                    <li><a href="#home" class="nav-link"><span class="nav-icon"><i class="fas fa-home"></i></span> Home</a></li>
+                    <li><a href="#about" class="nav-link"><span class="nav-icon"><i class="fas fa-user-astronaut"></i></span> Sobre</a></li>
+                    <li><a href="#movies" class="nav-link"><span class="nav-icon"><i class="fas fa-star"></i></span> Favoritos</a></li>
+                    <li><a href="#watchlist" class="nav-link"><span class="nav-icon"><i class="fas fa-list"></i></span> Watchlist</a></li>
+                    <li><a href="#stats" class="nav-link"><span class="nav-icon"><i class="fas fa-chart-line"></i></span> Estatísticas</a></li>
+                    <li><a href="#contact" class="nav-link"><span class="nav-icon"><i class="fas fa-terminal"></i></span> Contato</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="tech-hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="glitch" data-text="CineTech">CineTech</h1>
+                    <h2>Portfólio <span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+                    <p>Análise de filmes através de uma perspectiva tecnológica e futurista</p>
+                    <div class="hero-buttons">
+                        <a href="#movies" class="tech-btn">
+                            <span><i class="fas fa-play"></i> Explorar Filmes</span>
+                            <div class="btn-border"></div>
+                        </a>
+                        <a href="#contact" class="tech-btn secondary">
+                            <span><i class="fas fa-code"></i> Conectar</span>
+                            <div class="btn-border"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hologram">
+                        <div class="holo-content">
+                            <div class="holo-movie">
+                                <img src="https://source.unsplash.com/random/300x450/?scifi,movie" alt="Filme em Destaque" class="holo-img">
+                                <div class="holo-data">
+                                    <span class="data-tag">RECOMENDAÇÃO DO DIA</span>
+                                    <h3>Blade Runner 2049</h3>
+                                    <div class="holo-rating">
+                                        <i class="fas fa-star"></i> 8.0/10
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="holo-light"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="tech-about" id="about">
+        <div class="container">
+           
+                        <div class="about-info">
+                            <h3>Analista Cinematográfico Digital</h3>
+                            <p>Combinando minha paixão por cinema com expertise em tecnologia, ofereço análises únicas que exploram a interseção entre narrativa cinematográfica e inovação tecnológica.</p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="1500">0</div>
+                                    <div class="stat-label">Filmes Analisados</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="12">0</div>
+                                    <div class="stat-label">Anos de Experiência</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="98">0</div>
+                                    <div class="stat-label">% Satisfação</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="tech-movies" id="movies">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="section-number">02</span> FILMES FAVORITOS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="movies-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="scifi">Ficção Científica</button>
+                <button class="filter-btn" data-filter="drama">Drama</button>
+                <button class="filter-btn" data-filter="action">Ação</button>
+                <button class="filter-btn" data-filter="fantasy">Fantasia</button>
+            </div>
+            <div class="movies-grid">
+                <!-- Movie 1 -->
+                <div class="movie-card" data-category="scifi">
+                    <div class="card-border"></div>
+                    <div class="movie-poster">
+                        <img src="https://m.media-amazon.com/images/I/71PfZFFz9yL.jpg" alt="Matrix">
+                        <div class="movie-overlay">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i> 8.7
+                            </div>
+                            <div class="movie-year">1999</div>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Matrix</h3>
+                        <div class="movie-meta">
+                            <span class="movie-genre">Ficção Científica</span>
+                            <span class="movie-duration"><i class="far fa-clock"></i> 136min</span>
+                        </div>
+                        <p>Um hacker descobre a verdade sobre a realidade e sua função na guerra contra os controladores do mundo artificial.</p>
+                        <div class="movie-actions">
+                            <button class="tech-btn small add-watchlist" data-movie="Matrix">
+                                <span><i class="fas fa-plus"></i> Watchlist</span>
+                            </button>
+                            <button class="tech-btn small secondary">
+                                <span><i class="fas fa-info-circle"></i> Detalhes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie 2 -->
+                <div class="movie-card" data-category="scifi">
+                    <div class="card-border"></div>
+                    <div class="movie-poster">
+                        <img src="https://m.media-amazon.com/images/I/71NPmBOdq7L.jpg" alt="Blade Runner 2049">
+                        <div class="movie-overlay">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i> 8.0
+                            </div>
+                            <div class="movie-year">2017</div>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Blade Runner 2049</h3>
+                        <div class="movie-meta">
+                            <span class="movie-genre">Ficção Científica</span>
+                            <span class="movie-duration"><i class="far fa-clock"></i> 164min</span>
+                        </div>
+                        <p>Um novo blade runner descobre um segredo enterrado há muito tempo que tem o potencial de mergulhar o que resta da sociedade no caos.</p>
+                        <div class="movie-actions">
+                            <button class="tech-btn small add-watchlist" data-movie="Blade Runner 2049">
+                                <span><i class="fas fa-plus"></i> Watchlist</span>
+                            </button>
+                            <button class="tech-btn small secondary">
+                                <span><i class="fas fa-info-circle"></i> Detalhes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie 3 -->
+                <div class="movie-card" data-category="drama">
+                    <div class="card-border"></div>
+                    <div class="movie-poster">
+                        <img src="https://www.ubuy.com.br/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvOTFLQXJZUDAzWUwuX0FDX1NMMTUwMF8uanBn.jpg" alt="Parasita">
+                        <div class="movie-overlay">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i> 8.6
+                            </div>
+                            <div class="movie-year">2019</div>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Parasita</h3>
+                        <div class="movie-meta">
+                            <span class="movie-genre">Drama/Thriller</span>
+                            <span class="movie-duration"><i class="far fa-clock"></i> 132min</span>
+                        </div>
+                        <p>Uma família pobre que se infiltra na casa de uma família rica, criando uma relação simbiótica que toma um rumo inesperado.</p>
+                        <div class="movie-actions">
+                            <button class="tech-btn small add-watchlist" data-movie="Parasita">
+                                <span><i class="fas fa-plus"></i> Watchlist</span>
+                            </button>
+                            <button class="tech-btn small secondary">
+                                <span><i class="fas fa-info-circle"></i> Detalhes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie 4 -->
+                <div class="movie-card" data-category="action">
+                    <div class="card-border"></div>
+                    <div class="movie-poster">
+                        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-mad-max-estrada-da-furia-b-pop-arte-poster/poparteskins2/15938533704/43fb20df118cbd3ad37fc6cb94675b02.jpeg" alt="Mad Max: Estrada da Fúria">
+                        <div class="movie-overlay">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i> 8.1
+                            </div>
+                            <div class="movie-year">2015</div>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Mad Max: Estrada da Fúria</h3>
+                        <div class="movie-meta">
+                            <span class="movie-genre">Ação</span>
+                            <span class="movie-duration"><i class="far fa-clock"></i> 120min</span>
+                        </div>
+                        <p>Em um mundo pós-apocalíptico, Max e Furiosa fogem através do deserto em uma guerra pela sobrevivência.</p>
+                        <div class="movie-actions">
+                            <button class="tech-btn small add-watchlist" data-movie="Mad Max: Estrada da Fúria">
+                                <span><i class="fas fa-plus"></i> Watchlist</span>
+                            </button>
+                            <button class="tech-btn small secondary">
+                                <span><i class="fas fa-info-circle"></i> Detalhes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie 5 -->
+                <div class="movie-card" data-category="fantasy">
+                    <div class="card-border"></div>
+                    <div class="movie-poster">
+                        <img src="https://br.web.img3.acsta.net/medias/nmedia/18/92/91/32/20224832.jpg" alt="O Senhor dos Anéis">
+                        <div class="movie-overlay">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i> 8.8
+                            </div>
+                            <div class="movie-year">2001</div>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>O Senhor dos Anéis</h3>
+                        <div class="movie-meta">
+                            <span class="movie-genre">Fantasia</span>
+                            <span class="movie-duration"><i class="far fa-clock"></i> 178min</span>
+                        </div>
+                        <p>Um humilde hobbit da Terra-média parte em uma jornada para destruir o Um Anel e derrotar o Senhor do Escuro Sauron.</p>
+                        <div class="movie-actions">
+                            <button class="tech-btn small add-watchlist" data-movie="O Senhor dos Anéis">
+                                <span><i class="fas fa-plus"></i> Watchlist</span>
+                            </button>
+                            <button class="tech-btn small secondary">
+                                <span><i class="fas fa-info-circle"></i> Detalhes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie 6 -->
+                <div class="movie-card" data-category="scifi">
+                    <div class="card-border"></div>
+                    <div class="movie-poster">
+                        <img src="https://br.web.img3.acsta.net/medias/nmedia/18/87/32/31/20028688.jpg" alt="A Origem">
+                        <div class="movie-overlay">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i> 8.8
+                            </div>
+                            <div class="movie-year">2010</div>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>A Origem</h3>
+                        <div class="movie-meta">
+                            <span class="movie-genre">Ficção Científica</span>
+                            <span class="movie-duration"><i class="far fa-clock"></i> 148min</span>
+                        </div>
+                        <p>Um ladrão que rouba segredos corporativos através do uso da tecnologia de compartilhamento de sonhos recebe a tarefa inversa.</p>
+                        <div class="movie-actions">
+                            <button class="tech-btn small add-watchlist" data-movie="A Origem">
+                                <span><i class="fas fa-plus"></i> Watchlist</span>
+                            </button>
+                            <button class="tech-btn small secondary">
+                                <span><i class="fas fa-info-circle"></i> Detalhes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Watchlist Section -->
+    <section class="tech-watchlist" id="watchlist">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="section-number">03</span> MINHA WATCHLIST</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="watchlist-container">
+                <div class="watchlist-form">
+                    <div class="form-header">
+                        <h3><i class="fas fa-plus-circle"></i> Adicionar Filme</h3>
+                        <div class="form-line"></div>
+                    </div>
+                    <form id="add-movie-form">
+                        <div class="form-group">
+                            <label for="movie-title"><i class="fas fa-tag"></i> Título do Filme</label>
+                            <input type="text" id="movie-title" class="tech-input" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="movie-genre"><i class="fas fa-theater-masks"></i> Gênero</label>
+                                <select id="movie-genre" class="tech-input" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="Ficção Científica">Ficção Científica</option>
+                                    <option value="Drama">Drama</option>
+                                    <option value="Ação">Ação</option>
+                                    <option value="Fantasia">Fantasia</option>
+                                    <option value="Terror">Terror</option>
+                                    <option value="Comédia">Comédia</option>
+                                    <option value="Animação">Animação</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="movie-priority"><i class="fas fa-signal"></i> Prioridade</label>
+                                <select id="movie-priority" class="tech-input">
+                                    <option value="Baixa">Baixa</option>
+                                    <option value="Média">Média</option>
+                                    <option value="Alta">Alta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="movie-notes"><i class="fas fa-sticky-note"></i> Notas</label>
+                            <textarea id="movie-notes" class="tech-input" placeholder="Por que você quer assistir este filme?"></textarea>
+                        </div>
+                        <button type="submit" class="tech-btn">
+                            <span><i class="fas fa-save"></i> Salvar</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="watchlist-items" id="watchlist-items">
+                    <div class="watchlist-header">
+                        <h3><i class="fas fa-tasks"></i> Lista de Filmes</h3>
+                        <div class="watchlist-count">0 itens</div>
+                    </div>
+                    <div class="watchlist-list">
+                        <!-- Items will be added here dynamically -->
+                        <div class="empty-state">
+                            <i class="fas fa-film"></i>
+                            <p>Sua watchlist está vazia</p>
+                            <p>Adicione filmes que você deseja assistir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="tech-stats" id="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="section-number">04</span> ESTATÍSTICAS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="stats-info">
+                        <div class="stats-number" data-count="1273">0</div>
+                        <div class="stats-label">Filmes Assistidos</div>
+                    </div>
+                    <div class="stats-graph">
+                        <div class="graph-bar" style="height: 85%"></div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stats-info">
+                        <div class="stats-number" data-count="8.4">0</div>
+                        <div class="stats-label">Média de Avaliação</div>
+                    </div>
+                    <div class="stats-graph">
+                        <div class="graph-bar" style="height: 84%"></div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stats-info">
+                        <div class="stats-number" data-count="2784">0</div>
+                        <div class="stats-label">Horas de Filmes</div>
+                    </div>
+                    <div class="stats-graph">
+                        <div class="graph-bar" style="height: 72%"></div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stats-info">
+                        <div class="stats-number" data-count="2023">0</div>
+                        <div class="stats-label">Ano Ativo</div>
+                    </div>
+                    <div class="stats-graph">
+                        <div class="graph-bar" style="height: 95%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="genre-chart">
+                <h3>Distribuição por Gênero</h3>
+                <div class="chart-container">
+                    <div class="chart-bar" data-genre="Ficção Científica" data-percent="35">
+                        <div class="bar-label">Ficção Científica</div>
+                        <div class="bar-fill"></div>
+                        <div class="bar-percent">35%</div>
+                    </div>
+                    <div class="chart-bar" data-genre="Drama" data-percent="25">
+                        <div class="bar-label">Drama</div>
+                        <div class="bar-fill"></div>
+                        <div class="bar-percent">25%</div>
+                    </div>
+                    <div class="chart-bar" data-genre="Ação" data-percent="20">
+                        <div class="bar-label">Ação</div>
+                        <div class="bar-fill"></div>
+                        <div class="bar-percent">20%</div>
+                    </div>
+                    <div class="chart-bar" data-genre="Fantasia" data-percent="12">
+                        <div class="bar-label">Fantasia</div>
+                        <div class="bar-fill"></div>
+                        <div class="bar-percent">12%</div>
+                    </div>
+                    <div class="chart-bar" data-genre="Outros" data-percent="8">
+                        <div class="bar-label">Outros</div>
+                        <div class="bar-fill"></div>
+                        <div class="bar-percent">8%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="tech-contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="section-number">05</span> CONTATO</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-terminal"></i> Conecte-se Comigo</h3>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>contato@cinetech.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Telefone</h4>
+                                <p>+55 11 98765-4321</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Localização</h4>
+                                <p>São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-header">
+                            <h3><i class="fas fa-paper-plane"></i> Envie uma Mensagem</h3>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Seu Nome</label>
+                            <input type="text" id="name" class="tech-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-at"></i> Seu Email</label>
+                            <input type="email" id="email" class="tech-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Assunto</label>
+                            <input type="text" id="subject" class="tech-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> Mensagem</label>
+                            <textarea id="message" class="tech-input" required></textarea>
+                        </div>
+                        <button type="submit" class="tech-btn">
+                            <span><i class="fas fa-paper-plane"></i> Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-film"></i></span>
+                    <span class="logo-text">Cine<span>Tech</span></span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#movies">Filmes</a></li>
+                            <li><a href="#watchlist">Watchlist</a></li>
+                            <li><a href="#stats">Estatísticas</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Críticas</a></li>
+                            <li><a href="#">Análises</a></li>
+                            <li><a href="#">Recomendações</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de Uso</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 CineTech. Todos os direitos reservados.
+                </div>
+                <div class="back-to-top" id="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
