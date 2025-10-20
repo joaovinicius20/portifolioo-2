@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;600&display=swap');
+
+:root {
+    --branco: #ffffff;
+    --cor-de-fundo: #0f172a;
+    --fundo-senha: #1e293b;
+    --fundo-texto: #1e293b;
+    --borda: #3b82f6;
+    --borda-hover: #60a5fa;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+    --gradiente: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+* {
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.titulo-principal {
+    font-family: var(--roboto-mono);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: var(--gradiente);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.titulo-secundario {
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.conteudo-titulo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.conteudo-senha {
+    margin: 2rem auto;
+    background: var(--fundo-senha);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--borda);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    transition: transform 0.3s ease;
+}
+
+.conteudo-senha:hover {
+    transform: translateY(-3px);
+}
+
+#campo-senha {
+    background-color: transparent;
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.parametro {
+    background-color: var(--fundo-texto);
+    border-radius: 12px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+}
+
+.parametro-senha__titulo {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #e2e8f0;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.parametro-senha {
+    width: 100%;
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.parametro-senha__botao {
+    background-color: transparent;
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.parametro-senha__botao:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: var(--borda-hover);
+}
+
+.parametro-senha__texto {
+    padding: 0.75rem 1.5rem;
+    margin: 0 1rem;
+    font-size: 1.25rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #e2e8f0;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--borda);
+}
+
+.barra {
+    background-color: #334155;
+    height: 12px;
+    width: 100%;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.forca {
+    height: 12px;
+    border-radius: 6px;
+    transition: width 0.5s ease;
+}
+
+.fraca {
+    width: 25%;
+    background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.media {
+    width: 50%;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.forte {
+    width: 100%;
+    background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-top: 0.5rem;
+}
+
+.entropia {
+    text-align: right;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .parametro-senha {
+        width: calc(50% - 1rem);
+    }
+    
+    .conteudo-titulo {
+        margin-top: 4rem;
+    }
+    
+    .titulo-principal {
+        font-size: 3rem;
+    }
+    
+    .titulo-secundario {
+        font-size: 1.5rem;
+    }
+}

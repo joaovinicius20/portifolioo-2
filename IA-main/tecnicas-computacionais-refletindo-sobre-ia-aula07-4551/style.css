@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+    --cor-borda: rgba(43, 222, 253, 0.3);
+    --sombra: 0 4px 20px rgba(43, 222, 253, 0.15);
+    --transicao: all 0.3s ease;
+}
+  
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--cor-borda);
+    position: relative;
+    overflow: hidden;
+}
+
+.caixa-principal::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(43, 222, 253, 0.05) 0%, transparent 70%);
+    z-index: -1;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5%, 5%); }
+    50% { transform: translate(10%, 0); }
+    75% { transform: translate(5%, -5%); }
+    100% { transform: translate(0, 0); }
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(43, 222, 253, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cor-destaque), transparent);
+}
+
+.caixa-perguntas {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(33, 35, 51, 0.5);
+    border-radius: 10px;
+    border-left: 3px solid var(--cor-destaque);
+    text-align: left;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: var(--transicao);
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(43, 222, 253, 0.2), transparent);
+    transition: var(--transicao);
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(43, 222, 253, 0.3);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+.caixa-resultado {
+    display: none;
+    padding: 20px;
+    background-color: rgba(33, 35, 51, 0.7);
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 3px solid var(--cor-destaque);
+    text-align: left;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.texto-resultado {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.novamente-btn {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    font-weight: 600;
+    padding: 12px 25px;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+.novamente-btn:hover {
+    background-color: var(--cor-texto);
+    transform: scale(1.05);
+}
+
+/* Efeitos de foco e responsividade */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(43, 222, 253, 0.5);
+}
+
+@media (max-width: 600px) {
+    .caixa-principal {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .caixa-perguntas {
+        font-size: 1rem;
+    }
+    
+    button {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}

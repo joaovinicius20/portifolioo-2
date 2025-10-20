@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conectando o saber tradicional do campo com a inovação da cidade para um futuro sustentável">
+    <title>Conexão Campo-Cidade | Integração Rural-Urbana</title>
+    <style>
+        /* Reset e Variáveis CSS */
+        :root {
+            --verde-primario: #1e6f4e;
+            --verde-secundario: #2e8b57;
+            --terracota: #d45d44;
+            --azul-primario: #3a6ea5;
+            --azul-secundario: #4682b4;
+            --branco: #f9f9f9;
+            --offwhite: #f0f0f0;
+            --cinza-claro: #e0e0e0;
+            --cinza-medio: #a0a0a0;
+            --preto: #222;
+            --sombra: 0 4px 12px rgba(0,0,0,0.1);
+            --borda-redonda: 8px;
+            --transicao: all 0.3s ease-out;
+        }
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        /* Tipografia */
+        body {
+            font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+            color: var(--preto);
+            line-height: 1.7;
+            background-color: var(--offwhite);
+        }
+       
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+       
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.4rem; }
+       
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+       
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+       
+        /* Layout */
+        .container {
+            width: 92%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+       
+        .section {
+            padding: 5rem 0;
+        }
+       
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+            color: var(--verde-primario);
+        }
+       
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--terracota);
+            margin: 1.2rem auto 0;
+        }
+       
+        /* Componentes */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--borda-redonda);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transicao);
+            border: none;
+        }
+       
+        .btn-verde {
+            background-color: var(--verde-primario);
+            color: white;
+        }
+       
+        .btn-verde:hover {
+            background-color: var(--verde-secundario);
+            transform: translateY(-2px);
+            box-shadow: var(--sombra);
+        }
+       
+        .btn-azul {
+            background-color: var(--azul-primario);
+            color: white;
+        }
+       
+        .btn-azul:hover {
+            background-color: var(--azul-secundario);
+            transform: translateY(-2px);
+            box-shadow: var(--sombra);
+        }
+       
+        .card {
+            background: white;
+            border-radius: var(--borda-redonda);
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: var(--transicao);
+        }
+       
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+       
+        /* Header */
+        header {
+            background-color: rgba(255,255,255,0.98);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transicao);
+        }
+       
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+       
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--verde-primario);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+       
+        .logo span {
+            color: var(--azul-primario);
+        }
+       
+        .logo::before {
+            content: '🌱';
+            font-size: 1.6rem;
+        }
+       
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+       
+        nav ul li a {
+            font-weight: 600;
+            padding: 0.5rem 0;
+            position: relative;
+            color: var(--preto);
+        }
+       
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--verde-primario);
+            transition: var(--transicao);
+        }
+       
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+       
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+       
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+       
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+       
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+       
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+       
+        /* Sobre Section */
+        .sobre {
+            background-color: white;
+        }
+       
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+       
+        .sobre-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+       
+        .destaque {
+            color: var(--verde-primario);
+            font-weight: 600;
+        }
+       
+        .sobre-img {
+            position: relative;
+            border-radius: var(--borda-redonda);
+            overflow: hidden;
+            box-shadow: var(--sombra);
+        }
+       
+        .sobre-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transicao);
+        }
+       
+        .sobre-img:hover img {
+            transform: scale(1.03);
+        }
+       
+        /* Projetos Section */
+        .projetos {
+            background-color: var(--azul-primario);
+            color: white;
+        }
+       
+        .projetos .section-title {
+            color: white;
+        }
+       
+        .projetos .section-title::after {
+            background: var(--terracota);
+        }
+       
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+       
+        .projeto-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+       
+        .projeto-img {
+            height: 220px;
+            overflow: hidden;
+        }
+       
+        .projeto-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transicao);
+        }
+       
+        .projeto-card:hover .projeto-img img {
+            transform: scale(1.1);
+        }
+       
+        .projeto-info {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+       
+        .projeto-info h3 {
+            color: var(--verde-primario);
+            margin-bottom: 1rem;
+        }
+       
+        .projeto-info .btn {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+       
+        /* Depoimentos Section */
+        .depoimentos {
+            background-color: var(--offwhite);
+        }
+       
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+       
+        .depoimento-card {
+            padding: 2rem;
+            text-align: center;
+        }
+       
+        .depoimento-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--verde-primario);
+        }
+       
+        .depoimento-texto {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+       
+        .depoimento-texto::before,
+        .depoimento-texto::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--cinza-medio);
+            line-height: 0;
+        }
+       
+        .depoimento-texto::before {
+            vertical-align: top;
+            margin-right: 0.3rem;
+        }
+       
+        .depoimento-texto::after {
+            vertical-align: bottom;
+            margin-left: 0.3rem;
+        }
+       
+        .depoimento-autor {
+            font-weight: 600;
+            color: var(--verde-primario);
+        }
+       
+        .depoimento-local {
+            color: var(--cinza-medio);
+            font-size: 0.9rem;
+        }
+       
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--verde-primario), var(--azul-primario));
+            color: white;
+            text-align: center;
+        }
+       
+        .cta .container {
+            max-width: 800px;
+        }
+       
+        .cta h2 {
+            margin-bottom: 1.5rem;
+        }
+       
+        .cta p {
+            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+        }
+       
+        /* Footer */
+        footer {
+            background-color: var(--preto);
+            color: var(--cinza-claro);
+            padding: 4rem 0 2rem;
+        }
+       
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+       
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+       
+        .footer-col ul {
+            list-style: none;
+        }
+       
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+       
+        .footer-col ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+       
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+       
+        .newsletter-form input {
+            padding: 0.8rem;
+            border-radius: var(--borda-redonda);
+            border: none;
+            font-family: inherit;
+        }
+       
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+       
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: var(--transicao);
+        }
+       
+        .social-links a:hover {
+            background: var(--verde-primario);
+            transform: translateY(-3px);
+        }
+       
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--cinza-medio);
+            font-size: 0.9rem;
+        }
+       
+        /* Responsividade */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.4rem; }
+            h2 { font-size: 2rem; }
+           
+            .sobre-content {
+                grid-template-columns: 1fr;
+            }
+           
+            .sobre-img {
+                order: -1;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+       
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+           
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+           
+            .hero h1 {
+                font-size: 2rem;
+            }
+           
+            .hero p {
+                font-size: 1.1rem;
+            }
+           
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+           
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+           
+            .section {
+                padding: 3.5rem 0;
+            }
+        }
+       
+        @media (max-width: 480px) {
+            .projetos-grid,
+            .depoimentos-grid {
+                grid-template-columns: 1fr;
+            }
+           
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Conexão <span>Campo-Cidade</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <h1>Celebrando a Conexão que Alimenta e Sustenta</h1>
+            <p>Unindo saberes tradicionais do campo com a inovação urbana para construir um futuro mais justo, sustentável e conectado.</p>
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn btn-verde">Nossos Projetos</a>
+                <a href="#contato" class="btn btn-azul">Participe</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="section sobre" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre a Conexão</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p><span class="destaque">A Conexão Campo-Cidade</span> nasceu da necessidade de fortalecer os laços entre as áreas rurais e urbanas, promovendo o entendimento mútuo e a valorização dos saberes de cada espaço.</p>
+                    <p>Através de iniciativas <span class="destaque">culturais, educacionais e econômicas</span>, criamos pontes que beneficiam tanto os produtores rurais quanto os consumidores urbanos, em um ciclo virtuoso de troca e aprendizado.</p>
+                    <p>Acreditamos que esta conexão é fundamental para um <span class="destaque">desenvolvimento sustentável</span>, segurança alimentar e preservação das tradições culturais que formam a identidade do nosso povo.</p>
+                    <p>Desde 2015, já impactamos mais de <span class="destaque">5.000 famílias</span> em 50 municípios, criando oportunidades e fortalecendo comunidades.</p>
+                </div>
+                <div class="sobre-img">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section class="section projetos" id="projetos">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            <div class="projetos-grid">
+                <article class="card projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Feira de produtos orgânicos" loading="lazy">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Feiras Direto do Produtor</h3>
+                        <p>Leve produtos frescos diretamente do agricultor para o consumidor urbano, eliminando intermediários e garantindo preços justos para ambos os lados.</p>
+                        <a href="#" class="btn btn-verde">Conheça as feiras</a>
+                    </div>
+                </article>
+               
+                <article class="card projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Crianças aprendendo sobre agricultura" loading="lazy">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Intercâmbio Educacional</h3>
+                        <p>Programas de visitas escolares que permitem o contato direto entre crianças urbanas e a realidade rural, promovendo educação alimentar e ambiental.</p>
+                        <a href="#" class="btn btn-verde">Agende uma visita</a>
+                    </div>
+                </article>
+               
+                <article class="card projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Agricultor usando tablet" loading="lazy">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Tecnologia no Campo</h3>
+                        <p>Iniciativas que levam soluções tecnológicas urbanas para melhorar a produção rural, sempre respeitando e integrando os saberes tradicionais.</p>
+                        <a href="#" class="btn btn-verde">Veja as soluções</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="section depoimentos" id="depoimentos">
+        <div class="container">
+            <h2 class="section-title">Quem participa recomenda</h2>
+            <div class="depoimentos-grid">
+                <div class="card depoimento-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Silva" class="depoimento-avatar">
+                    <blockquote class="depoimento-texto">
+                        Participar das feiras mudou minha vida. Antes vendia para intermediários por preços baixíssimos. Hoto tenho contato direto com quem consome meus produtos e recebo o valor justo.
+                    </blockquote>
+                    <p class="depoimento-autor">Maria Silva</p>
+                    <p class="depoimento-local">Agricultora - São José do Vale</p>
+                </div>
+               
+                <div class="card depoimento-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Oliveira" class="depoimento-avatar">
+                    <blockquote class="depoimento-texto">
+                        Levei minha turma da escola para conhecer uma fazenda orgânica. Foi incrível ver as crianças descobrindo de onde vem a comida que comem todos os dias. Aprendemos muito!
+                    </blockquote>
+                    <p class="depoimento-autor">Carlos Oliveira</p>
+                    <p class="depoimento-local">Professor - São Paulo</p>
+                </div>
+               
+                <div class="card depoimento-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Costa" class="depoimento-avatar">
+                    <blockquote class="depoimento-texto">
+                        Como consumidora, adoro comprar direto dos produtores. Sei a origem do que estou comendo, ajudo famílias locais e ainda economizo. Todos ganham com essa conexão!
+                    </blockquote>
+                    <p class="depoimento-autor">Ana Costa</p>
+                    <p class="depoimento-local">Nutricionista - Rio de Janeiro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2>Pronto para se conectar?</h2>
+            <p>Seja um produtor participante, um consumidor consciente ou um voluntário, há sempre espaço para você nesta rede.</p>
+            <a href="#contato" class="btn btn-azul">Junte-se a nós</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Sobre Nós</h3>
+                    <p>A Conexão Campo-Cidade é uma iniciativa que promove o diálogo e a cooperação entre as áreas rurais e urbanas desde 2015.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+               
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#projetos">Nossos Projetos</a></li>
+                        <li><a href="#">Seja um Parceiro</a></li>
+                        <li><a href="#">Transparência</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contato@conexaocc.org.br</li>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Centro, SP</li>
+                    </ul>
+                </div>
+               
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Receba novidades e oportunidades em sua caixa de entrada.</p>
+                    <form class="newsletter-form" action="#" method="post">
+                        <input type="text" name="nome" placeholder="Seu nome" required>
+                        <input type="email" name="email" placeholder="Seu melhor email" required>
+                        <button type="submit" class="btn btn-verde">Assinar</button>
+                    </form>
+                </div>
+            </div>
+           
+            <div class="copyright">
+                <p>&copy; 2023 Conexão Campo-Cidade. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-90 | Uma iniciativa da Associação Ponte Rural-Urbana</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
